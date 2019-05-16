@@ -20,7 +20,7 @@ class Uniq2 < Formula
     cd uniq2_path do
       system "dep", "ensure", "-vendor-only"
       system "make", "build"
-      bin.install "uniq2"
+      bin.install "cmd/uniq2/uniq2"
     end
 
     test do
