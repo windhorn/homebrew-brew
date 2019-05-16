@@ -1,6 +1,6 @@
 require "formula"
 
-HOMEBREW_UNIQ2_VERSION="0.2.0"
+HOMEBREW_UNIQ2_VERSION="1.0.0"
 
 class Uniq2 < Formula
   desc "Eliminating duplicated lines"
