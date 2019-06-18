@@ -1,6 +1,6 @@
 require "formula"
 
-HOMEBREW_RRH_VERSION="0.5"
+HOMEBREW_RRH_VERSION="1.0.0"
 
 class Rrh < Formula
   desc "Git Repository Integrated Manager"
@@ -10,7 +10,6 @@ class Rrh < Formula
   head "https://github.com/tamada/rrh.git", :branch => "master"
 
   depends_on "go"  => :build
-  depends_on "dep" => :build
 
   option "without-completions", "Disable bash completions"
 
@@ -20,7 +19,6 @@ class Rrh < Formula
     rrh_path.install buildpath.children
 
     cd rrh_path do
-      system "dep", "ensure", "-vendor-only"
       system "make", "build"
       bin.install "rrh"
     end
