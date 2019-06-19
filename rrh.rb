@@ -15,6 +15,7 @@ class Rrh < Formula
 
   def install
     ENV['GOPATH'] = buildpath
+    ENV['GO111MODULE'] = 'on'
     rrh_path = buildpath/"src/github.com/tamada/rrh/"
     rrh_path.install buildpath.children
 
