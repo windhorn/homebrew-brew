@@ -1,6 +1,6 @@
 require "formula"
 
-HOMEBREW_RRH_VERSION="1.0.2"
+HOMEBREW_RRH_VERSION="1.0.3"
 
 class Rrh < Formula
   desc "Git Repository Integrated Manager"
@@ -29,7 +29,7 @@ class Rrh < Formula
     end
 
     if build.with? "completions"
-      bash_completion.install "src/github.com/tamada/rrh/completions/rrh_completion.bash"
+      bash_completion.install "src/github.com/tamada/rrh/completions/bash/rrh"
     end
   end
 end
