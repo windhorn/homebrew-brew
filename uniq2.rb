@@ -1,6 +1,6 @@
 require "formula"
 
-HOMEBREW_UNIQ2_VERSION="1.0.0"
+HOMEBREW_UNIQ2_VERSION="1.0.1"
 
 class Uniq2 < Formula
   desc "Eliminating duplicated lines"
@@ -10,15 +10,14 @@ class Uniq2 < Formula
   head "https://github.com/tamada/uniq2.git", :branch => "master"
 
   depends_on "go"  => :build
-  depends_on "dep" => :build
 
   def install
     ENV['GOPATH'] = buildpath
+    ENV['GO111MODULE'] = 'on'
     uniq2_path = buildpath/"src/github.com/tamada/uniq2/"
     uniq2_path.install buildpath.children
 
     cd uniq2_path do
-      system "dep", "ensure", "-vendor-only"
       system "make", "build"
       bin.install "cmd/uniq2/uniq2"
     end
