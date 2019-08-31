@@ -6,6 +6,8 @@
     * Extended uniq.
 * [heatman](https://github.com/tamada/goheatman)
     * Creating heat map from given csv file.
+* [heatman](https://github.com/tamada/qrg)
+    * QR code generator.
 
 ## How to install rrh, uniq2 and/or heatman.
 
@@ -14,5 +16,6 @@ $ brew tap tamada/brew # <- at the first time
 $ brew install rrh
 $ brew install uniq2
 $ brew install heatman
+$ brew install qrg
 ```
 
